@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | CLAWD-9INE Static Workspace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2309090b'/><text y='72' x='52' font-family='Courier New, monospace' font-weight='900' font-size='68' fill='%23ffffff' text-anchor='middle'>9</text></svg>">
+    <script>
+        if (localStorage.getItem('project-theme') === 'light') {
+            document.documentElement.classList.add('light-mode');
+        }
+    </script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <strong>CLAWD-9INE</strong>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+        <section class="content-card">
+            <div class="meta-label">INTRODUCTION TO CLOUD COMPUTING</div>
+            <h1>Static Architectural Build</h1>
+            <p>Welcome to our deployment testing environment. This project serves as a collaborative exploration of modern frontend structures, semantic layouts, and managed deployment workflows using version control assets.</p>
+            
+            <div class="hero-image-box">
+                <img src="images/clawd-9ine-hero.jpg" alt="Structured design layout placeholder">
+            </div>
+
+            <div class="milestone-container">
+                <div class="progress-header">
+                    <span style="font-weight: 500;">Project Deployment Progress</span>
+                    <span style="color: var(--text-muted);">75% Complete</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="content-card">
+            <div class="meta-label">ARCHITECTURE</div>
+            <h2>Service Delivery Models</h2>
+            <p>Cloud computing infrastructure is categorized into three distinct operational layers, each offering varying levels of control and management.</p>
+            
+            <div class="team-grid">
+                <div class="member-card">
+                    <h3>IaaS</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;"><strong>Infrastructure as a Service.</strong> Provides fundamental computing, storage, and networking resources on demand, bypassing physical hardware deployment.</p>
+                </div>
+                <div class="member-card">
+                    <h3>PaaS</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;"><strong>Platform as a Service.</strong> Delivers a managed cloud environment for deployment, allowing teams to build apps without managing underlying OS structures.</p>
+                </div>
+                <div class="member-card">
+                    <h3>SaaS</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;"><strong>Software as a Service.</strong> End-user applications managed entirely by providers, accessible seamlessly via web browsers and terminal integrations.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="footer-copy">&copy; 2026 <strong>CLAWD-9INE</strong>. Architectural Systems.</p>
+                <div class="footer-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            
+            <div class="footer-socials">
+                <a href="https://github.com" target="_blank" aria-label="GitHub" class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                </a>
+                <a href="https://x.com" target="_blank" aria-label="X" class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z M4 20l6.768 -6.768 M20 4l-6.768 6.768"></path></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
