@@ -37,4 +37,29 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('project-theme', 'dark');
         }
     });
+
+    // Mobile Hamburger Menu Interactive Logic
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            
+            // Toggle hamburger icon state cleanly between open and closed vectors
+            if (navLinks.classList.contains('open')) {
+                menuToggle.textContent = '✕';
+            } else {
+                menuToggle.textContent = '☰';
+            }
+        });
+        
+        // Auto-close menu if viewport scales past mobile boundaries while open
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 600) {
+                navLinks.classList.remove('open');
+                menuToggle.textContent = '☰';
+            }
+        });
+    }
 });

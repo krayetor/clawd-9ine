@@ -94,6 +94,31 @@ body {
     color: var(--text-primary);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+}
+
+.menu-btn {
+    display: none; /* Invisible on desktop layouts */
+    background: transparent;
+    border: 1px solid var(--border-flat);
+    color: var(--text-primary);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-left: 0.75rem;
+    transition: background 0.15s ease;
+}
+
+.menu-btn:hover {
+    background-color: var(--border-flat);
+}
+
 /* Circular Avatar Frame Structure */
 .avatar-frame {
     width: 90px;
@@ -347,31 +372,57 @@ input:focus, textarea:focus {
 /* Responsive adjustments for mobile viewports */
 /* Responsive adjustments for mobile viewports */
 @media (max-width: 600px) {
-    /* 1. Reduce outer page spacing to gain screen real estate */
     body {
         padding: 1rem 0.75rem;
     }
 
-    /* 2. Slightly reduce navbar internal spacing */
     .navbar {
         padding: 1rem;
         margin-bottom: 1.5rem;
+        position: relative; /* Contextually anchors absolute dropdown positioning */
     }
 
-    /* 3. Optimize container padding to prevent inner element overflow */
     .content-card {
         padding: 1.5rem 1.25rem;
     }
 
-    /* 4. Fix hero image aspect ratio so it doesn't look too tall or narrow */
     .hero-image-box {
         height: 220px;
     }
 
-    /* 5. Keep footer layout aligned */
     .footer-container {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    /* Hamburger UI Operational Overrides */
+    .menu-btn {
+        display: inline-flex; /* Reveal controls on touch viewports */
+    }
+
+    .nav-links {
+        display: none; /* Hide native layout by default */
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        left: 0;
+        right: 0;
+        background-color: var(--surface-card);
+        border: 1px solid var(--border-flat);
+        border-radius: var(--radius-geo);
+        flex-direction: column;
+        padding: 1rem;
+        z-index: 1000;
+    }
+
+    .nav-links.open {
+        display: flex; /* Dropdown visibility activated via script state */
+    }
+
+    .nav-links a {
+        margin: 0.5rem 0;
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
     }
 }
 
