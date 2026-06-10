@@ -345,7 +345,30 @@ input:focus, textarea:focus {
 }
 
 /* Responsive adjustments for mobile viewports */
+/* Responsive adjustments for mobile viewports */
 @media (max-width: 600px) {
+    /* 1. Reduce outer page spacing to gain screen real estate */
+    body {
+        padding: 1rem 0.75rem;
+    }
+
+    /* 2. Slightly reduce navbar internal spacing */
+    .navbar {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* 3. Optimize container padding to prevent inner element overflow */
+    .content-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    /* 4. Fix hero image aspect ratio so it doesn't look too tall or narrow */
+    .hero-image-box {
+        height: 220px;
+    }
+
+    /* 5. Keep footer layout aligned */
     .footer-container {
         flex-direction: column;
         align-items: flex-start;
