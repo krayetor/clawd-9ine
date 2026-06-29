@@ -40,6 +40,5 @@ clawd-9ine/
                 ├── member2.jpeg        # Image of member 2
                 ├── member3.jpeg        # Image of member 3
                 ├── member4.jpeg        # Image of member 4
-                ├── member5.jpeg        # Image of member 5
-                ├── member6.jpeg        # Image of member 6
+                └── member5.jpeg        # Image of member 5
 ```
